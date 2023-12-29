@@ -1,13 +1,22 @@
+import MoviesCarousel from "@/components/MoviesCarousel";
 import { Button } from "@/components/ui/button";
+import { getUpcomingMovies } from "@/lib/getMovies";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
+
+  const upcomingMovies = await getUpcomingMovies();
+  const topRatedMovies = await getTopRatedMovies();
+  const popularMovies = await getPopularMovies();
+
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen p-24 ">
-<h1>Disney</h1>
-<Button>button</Button>
-
-
+    <main>
+      {/* CarrouselBanneerWrapper*/}
+      <div className="flex flex-col space-y-2 xl:mt-48">
+       <MoviesCarousel movies={upcomingMovies} title="Upcoming"/> 
+        {/*MoviesCarrousel movies={...} title="Upcoming"*/}
+        {/*MoviesCarrousel movies={...} title="Upcoming"*/}
+      </div>
     </main>
   );
 }

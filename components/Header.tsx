@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { ModeToggle } from "./ModeToggle";
 import SearchInput from "./SearchInput";
+import Genre from "./Genre";
 
 function Header() {
   return (
@@ -18,6 +19,7 @@ function Header() {
       </Link>
 
       <div className="flex space-x-2">
+        <Genre/>
         <SearchInput/>
         <ModeToggle/>        
       </div>
