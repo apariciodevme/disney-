@@ -7,7 +7,7 @@ import Genre from "./Genre";
 
 function Header() {
   return (
-    <header className="fixed z-20 flex items-center justify-between w-full p-5 bg-gradient-to-t from-gray-200/0 via-gray-900/25 to-gray-900 ">
+    <header className=" z-20 flex items-center justify-between w-full p-5 bg-gradient-to-t from-gray-200/0 via-gray-900/25 to-gray-900  ">
       <Link href={"/"} className="mr-10">
         <Image
           src={"https://links.papareact.com/a943ae"}
